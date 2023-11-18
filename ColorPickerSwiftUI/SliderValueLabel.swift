@@ -8,11 +8,16 @@
 import SwiftUI
 
 struct SliderValueLabel: View {
+    
+    let value: Double
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("\(lround(value))")
+            .frame(width: 35, alignment: .leading)
+            .foregroundColor(.white)
     }
 }
 
 #Preview {
-    SliderValueLabel()
+    SliderValueLabel(value: 120)
 }
